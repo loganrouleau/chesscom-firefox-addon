@@ -1,0 +1,13 @@
+body {
+  background-color: #41403d;
+  color: #bebdbc;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-size: medium;
+}

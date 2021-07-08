@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Chess.com Opening Explorer",
+  "version": "1.0",
+  "description": "View an opening tree with frequency of next move as you play on Chess.com",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "content_scripts": [
+    {
+      "matches": ["*://www.chess.com/play/computer*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "sidebar_action": {
+    "default_title": "Opening Explorer",
+    "default_panel": "sidebar.html",
+    "default_icon": "sidebar_icon.png",
+    "open_at_install": true
+  },
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Shift+Alt+Z"
+      }
+    }
+  }
+}
